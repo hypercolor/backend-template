@@ -1,0 +1,33 @@
+:memory:*
+
+knexfile.js
+
+**/*.orig
+
+# OSX
+#
+.DS_Store
+
+# Android/IntelliJ
+#
+build/
+.idea
+.gradle
+local.properties
+*.iml
+
+# node.js
+#
+dist
+node_modules/
+npm-debug.log
+yarn-error.log
+src/bundle/
+
+# Bundle artifact
+*.jsbundle
+
+coverage
+
+.env
+tsconfig.tsbuildinfo

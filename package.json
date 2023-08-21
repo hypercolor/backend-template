@@ -1,0 +1,63 @@
+{
+  "name": "backend-template",
+  "version": "1.0.0",
+  "description": "This is used by the team at Hypercolor to quickly boostrap a new backend project.",
+  "author": "suschuk24@gmail.com",
+  "private": false,
+  "license": "UNLICENSED",
+  "scripts": {
+    "watch": "tsc --watch",
+    "build": "tsc --build --clean && tsc --build",
+    "start": "node -r dotenv/config build/entry-points/api.js",
+    "develop": "nodemon -r dotenv/config build/entry-points/api.js"
+  },
+  "bin": {
+    "create-express-server": "bin/create-server.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-sqs": "^3.363.0",
+    "@hypercolor/code-push": "^0.0.3",
+    "@hypercolor/envconfig": "^1.0.15",
+    "@hypercolor/mongodb-orm": "^0.0.1",
+    "@hypercolor/promise-queue": "^0.0.8",
+    "aws-sdk": "^2.1439.0",
+    "axios": "^1.2.1",
+    "bcryptjs": "^2.4.3",
+    "clone": "^2.1.2",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "express-basic-auth": "^1.2.1",
+    "express-rate-limit": "^5.3.0",
+    "is-circular": "^1.0.2",
+    "moment": "^2.29.1",
+    "mongodb": "^5.7.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "pjson": "^1.0.9",
+    "rate-limit-redis": "^2.1.0",
+    "reflect-metadata": "^0.1.13",
+    "sqs-consumer": "^7.2.2",
+    "ts-custom-error": "^3.2.0",
+    "typedjson": "^1.8.0",
+    "typeorm": "^0.3.17",
+    "typeorm-naming-strategies": "^4.1.0",
+    "winston": "^3.10.0",
+    "winston-papertrail-transport": "^1.0.9"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/compression": "^1.7.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/express-rate-limit": "^5.1.3",
+    "@types/morgan": "^1.9.3",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^18.11.18",
+    "@types/rate-limit-redis": "^1.7.4",
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.5.0",
+    "typescript": "4.9.4"
+  }
+}
