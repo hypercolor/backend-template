@@ -52,7 +52,7 @@ export class ApiLoggingService {
 
   public static getIpAddress(request: e.Request) {
     let ipAddr = request.headers['x-forwarded-for'];
-    let ipAddress = request.connection.remoteAddress;
+    let ipAddress = request.socket.remoteAddress;
     if (ipAddr) {
       if (ipAddr.constructor === Array) {
         ipAddress = ipAddr[ipAddr.length - 1];
