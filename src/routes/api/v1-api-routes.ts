@@ -2,7 +2,7 @@ import {AuthenticatedRouter} from '../classes/authenticated-router';
 import e from 'express';
 import {ControllerFactory} from '../classes/controller-factory';
 import { GetHelloWorldController } from "./v1/hello/get";
-import { XAuthTokenAuthenticator } from '../../auth/x-auth-token-authenticator';
+import { ExampleAuthenticator } from '../../auth/example-authenticator';
 import { PermissionsMiddleware } from '../../auth/permissions-middleware';
 import { PermissionsChecks } from '../../auth/permissions-checks';
 
@@ -22,7 +22,7 @@ export class V1ApiRoutes {
             AuthenticatedRouter.build({
                 controllerBuilder: ControllerFactory.jsonApi,
                 middleware: [
-                    new XAuthTokenAuthenticator().handler,
+                    new ExampleAuthenticator().handler,
                     PermissionsMiddleware.all([
                         //Call PermissionsChecks method here
                     ])

@@ -2,9 +2,9 @@
 import {UnauthorizedError} from '../util/errors';
 import {Authenticator} from './authenticator';
 
-export class XAuthTokenAuthenticator extends Authenticator {
+export class ExampleAuthenticator extends Authenticator {
     protected async authenticate() {
-        const authHeader = this.req.header('X-Auth-Token');
+        const authHeader = this.req.header('t');
         if (!authHeader) {
             throw new UnauthorizedError('Auth header not present.');
         }
